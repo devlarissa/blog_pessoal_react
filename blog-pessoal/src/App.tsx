@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
+import Login from './paginas/login/Login';
 import Home from './paginas/home/Home';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+
 
 
 let nome = "Larissa";
@@ -13,13 +15,23 @@ function App() {
     <>
       <Router>
         <Navbar />
-        
-        <Switch>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
-      
+        <Switch>
+          <div style={{ minHeight: '100vh' }}>
+
+            <Route exact path="/">
+              <Login />
+            </Route>
+
+            <Route path="/login">
+              <Login />
+            </Route>
+
+            <Route path="/home">
+              <Home />
+            </Route>
+
+          </div>
         </Switch>
 
         <Footer />
