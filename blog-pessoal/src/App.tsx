@@ -5,8 +5,9 @@ import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 import Login from './paginas/login/Login';
 import Home from './paginas/home/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import ListaTema from './components/temas/listatema/ListaTema';
+import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 import './App.css';
-
 
 
 let nome = "Larissa";
@@ -34,6 +35,14 @@ function App() {
 
             <Route path="/cadastrousuario">
               <CadastroUsuario />
+            </Route>
+
+            <Route path="/temas">
+              <ListaTema />
+            </Route>
+
+            <Route path="/posts">
+              <ListaPostagem />
             </Route>
 
           </div>
